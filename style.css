@@ -129,7 +129,7 @@ header {
 
 /* Logo */
 .header-logo img {
-    max-height: 50px;         /* same size as previous text header */
+    max-height: 39px;         /* same size as previous text header */
     display: block;
 }
 
@@ -145,7 +145,6 @@ header {
     font-weight: 500;
 }
 
-/* Make it responsive */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -157,4 +156,9 @@ header {
         gap: 20px;
         flex-wrap: wrap;
     }
+}
+
+body > .hero,
+body > .section {
+    margin-top: 70px;
 }
