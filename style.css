@@ -141,15 +141,3 @@ nav a {
     display: block;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        margin-top: 10px;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-}
