@@ -172,3 +172,21 @@ body > .hero,
 body > .section {
     margin-top: 90px; /* matches header height */
 }
+
+/* Header logo (small, fits nav) */
+.header-logo img {
+    max-height: 50px;   /* small but visible */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.header-logo img:hover {
+    transform: scale(1.05);
+}
+
+/* About section logo (larger, centered) */
+.about-logo img {
+    max-height: 80px;   /* bigger than header logo */
+    display: block;
+    margin: 0 auto 20px auto;
+}
