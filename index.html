@@ -1,34 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JKstays | Vacation Rentals</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JKstays | Luxury Short-Term Rentals</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <h1>JKstays</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header>
+    <div class="logo">JK<span>stays</span></div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#book">Book</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <section class="hero">
-        <h2>Premium Short-Term Rentals</h2>
-        <p>Real estate management of vacation homes and short-term rentals.  
-        Providing information and guidance on temporary lodging to travelers.</p>
-
-        <a href="https://www.airbnb.com/" target="_blank" class="button">
-            View Our Airbnb Listings
+<section class="hero">
+    <div class="hero-content">
+        <h1>Luxury Short-Term Living</h1>
+        <p>Premium vacation rentals curated for comfort, elegance, and seamless stays.</p>
+        <a href="https://www.airbnb.com/" target="_blank" class="primary-btn">
+            View Our Listings
         </a>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <p>© 2026 JKstay. All rights reserved.</p>
-    </footer>
+<section id="about" class="section fade-in">
+    <h2>About JKstays</h2>
+    <p>
+        JKstays specializes in managing high-quality short-term rental properties.
+        We provide travelers with elevated accommodations while offering property
+        owners professional management and peace of mind.
+    </p>
+</section>
+
+<section id="book" class="section dark fade-in">
+    <h2>Booking Inquiry</h2>
+
+    <form action="https://formsubmit.co/kayla@jkstay.net" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="dates" placeholder="Requested Dates">
+        <textarea name="message" placeholder="Tell us about your stay"></textarea>
+        <button type="submit">Submit Inquiry</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 JKstay. All rights reserved.</p>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('appear');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
 
 </body>
 </html>
