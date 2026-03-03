@@ -135,11 +135,12 @@ header {
     transform: scale(1.05);
 }
 
-/* About section logo (larger) */
+/* About section logo (larger, premium) */
 .about-logo img {
-    max-height: 80px; /* bigger for section */
+    max-height: 120px; /* bigger for premium look */
+    width: auto;       /* keep original aspect ratio */
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px auto; /* centers logo above heading */
 }
 
 /* Navigation */
