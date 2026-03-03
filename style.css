@@ -159,8 +159,7 @@ header {
     }
 }
 
-
 body > .hero,
 body > .section {
-    margin-top: 70px;          /* match header height */
+    margin-top: 90px;  /* matches new header/logo height */
 }
