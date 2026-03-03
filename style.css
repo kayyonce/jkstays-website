@@ -117,3 +117,9 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+.about-logo {
+    max-width: 200px;
+    margin: 30px auto;
+    display: block;
+}
