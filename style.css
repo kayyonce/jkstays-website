@@ -125,6 +125,6 @@ header {
 }
 
 .header-logo img {
-    max-height: 32px; /* smaller, similar to previous text header size */
+    max-height: 24px; /* smaller, similar to previous text header size */
     display: block;
 }
