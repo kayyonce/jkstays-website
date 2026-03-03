@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact | JKstays</title>
+    <title>JKstays | Luxury Stays & Experiences</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="fade-in">
+    <header>
         <div class="header-container">
             <div class="header-logo">
-                <h1 style="margin:0; font-family: 'Playfair Display', serif;">JKstays</h1>
+                <h1>JKstays</h1>
             </div>
             <nav class="header-nav">
                 <a href="index.html">Home</a>
@@ -20,14 +20,30 @@
         </div>
     </header>
 
-    <section class="section fade-in">
-        <h2 style="font-family: 'Playfair Display', serif;">Contact Us</h2>
-        <p>For booking inquiries or property partnerships:</p>
-        <a href="mailto:hello@jkstay.net" class="primary-btn">Email JKstays</a>
+    <section class="hero fade-in">
+        <div>
+            <h1>Discover Unforgettable Stays</h1>
+            <p>Luxury accommodations and unique experiences worldwide.</p>
+            <a href="contact.html" class="primary-btn">Book Now</a>
+        </div>
+    </section>
+
+    <section class="section dark fade-in">
+        <h2>Why Choose JKstays?</h2>
+        <p>Curated properties, personalized service, seamless bookings.</p>
     </section>
 
     <footer>
         <p>© 2026 JKstay. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Simple fade-in on scroll
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('appear');
+            });
+        });
+    </script>
 </body>
 </html>
