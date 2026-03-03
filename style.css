@@ -266,7 +266,7 @@ header {
 
 /* Logo */
 .header-logo img {
-    max-height: 39px;         /* same size as previous text header */
+    max-height: 50px;         /* same size as previous text header */
     display: block;
 }
 
