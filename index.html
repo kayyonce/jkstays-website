@@ -2,48 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JKstays | Luxury Stays & Experiences</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+    <title>JKstays</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="header-logo">
-                <h1>JKstays</h1>
-            </div>
-            <nav class="header-nav">
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero fade-in">
-        <div>
-            <h1>Discover Unforgettable Stays</h1>
-            <p>Luxury accommodations and unique experiences worldwide.</p>
-            <a href="contact.html" class="primary-btn">Book Now</a>
-        </div>
-    </section>
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="header-logo">
+      <a href="index.html">
+        <img src="jkstays-logo-pdf" alt="JKstays Logo">
+      </a>
+    </div>
 
-    <section class="section dark fade-in">
-        <h2>Why Choose JKstays?</h2>
-        <p>Curated properties, personalized service, seamless bookings.</p>
-    </section>
+    <!-- Navigation -->
+    <nav class="header-nav">
+      <a href="#about">About</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <footer>
-        <p>© 2026 JKstay. All rights reserved.</p>
-    </footer>
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Welcome to JKstays</h1>
+        <a href="#book" class="primary-btn">View Our Listings</a>
+    </div>
+</section>
 
-    <script>
-        // Simple fade-in on scroll
-        window.addEventListener('scroll', () => {
-            document.querySelectorAll('.fade-in').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('appear');
-            });
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About JKstays</h2>
+    <p>We manage luxury vacation homes and short-term rentals, making your stay seamless and unforgettable.</p>
+</section>
+
+<!-- BOOK -->
+<section id="book" class="section dark">
+    <h2>Book Your Stay</h2>
+    <p>Click below to view our listings on Airbnb or send us a booking inquiry directly.</p>
+    <a href="https://www.airbnb.com/" target="_blank" class="primary-btn">View Airbnb Listings</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 JKstays. All rights reserved.</p>
+</footer>
+
+<!-- Optional: Scroll animation script -->
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) return;
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target);
         });
-    </script>
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
 </body>
 </html>
