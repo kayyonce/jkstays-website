@@ -129,7 +129,7 @@ header {
 
 /* Logo */
 .header-logo img {
-    max-height: 32px;         /* same size as previous text header */
+    max-height: 50px;         /* same size as previous text header */
     display: block;
 }
 
