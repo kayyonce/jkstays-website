@@ -126,7 +126,7 @@ header {
 
 /* Header logo (small) */
 .header-logo img {
-    max-height: 50px; /* small enough to fit nav */
+    max-height: 75px; /* small enough to fit nav */
     display: block;
     transition: transform 0.3s ease;
 }
@@ -137,7 +137,7 @@ header {
 
 /* About section logo (larger, premium) */
 .about-logo img {
-    max-height: 120px; /* bigger for premium look */
+    max-height: 200px; /* bigger for premium look */
     width: auto;       /* keep original aspect ratio */
     display: block;
     margin: 0 auto 20px auto; /* centers logo above heading */
