@@ -102,11 +102,10 @@ footer {
     transform: translateY(0);
 }
 
-/* ---------------- HEADER ---------------- */
-
+/* ---------- HEADER ---------- */
 header {
-    position: fixed;       /* fixes it at the top */
-    top: 0;                /* stick to top */
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
     background: white;
@@ -114,7 +113,7 @@ header {
     z-index: 1000;
 }
 
-/* Container inside header */
+/* Header container */
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -125,14 +124,22 @@ header {
     box-sizing: border-box;
 }
 
-.about-logo img {
-    max-height: 80px; /* slightly bigger for section than header */
+/* Header logo (small) */
+.header-logo img {
+    max-height: 50px; /* small enough to fit nav */
     display: block;
-    margin: 0 auto 20px auto; /* centers it above heading with spacing */
+    transition: transform 0.3s ease;
 }
 
 .header-logo img:hover {
     transform: scale(1.05);
+}
+
+/* About section logo (larger) */
+.about-logo img {
+    max-height: 80px; /* bigger for section */
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
 /* Navigation */
@@ -153,7 +160,7 @@ header {
     transform: translateY(-2px);
 }
 
-/* Responsive for small screens */
+/* Responsive */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -167,26 +174,8 @@ header {
     }
 }
 
-/* Push page content below fixed header */
+/* Push content below header */
 body > .hero,
 body > .section {
     margin-top: 90px; /* matches header height */
-}
-
-/* Header logo (small, fits nav) */
-.header-logo img {
-    max-height: 50px;   /* small but visible */
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.header-logo img:hover {
-    transform: scale(1.05);
-}
-
-/* About section logo (larger, centered) */
-.about-logo img {
-    max-height: 80px;   /* bigger than header logo */
-    display: block;
-    margin: 0 auto 20px auto;
 }
