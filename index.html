@@ -1,90 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JKstays | Luxury Short-Term Rentals</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Contact | JKstays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header class="fade-in">
+        <div class="header-container">
+            <div class="header-logo">
+                <h1 style="margin:0; font-family: 'Playfair Display', serif;">JKstays</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<header>
-  <div class="header-container">
-    <!-- Logo on upper-left -->
-    <div class="header-logo">
-      <a href="index.html">
-        <img src="jkstays-logo.pdf" alt="JKstays Logo">
-    </div>
-        
-    <nav class="header-nav">
-      <a href="#about">About</a>
-      <a href="#book">Book</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </a>
-</header>
-  
-    
-<section class="hero">
-    <div class="hero-content">
-        <h1>Luxury Short-Term Living</h1>
-        <p>Premium vacation rentals curated for comfort, elegance, and seamless stays.</p>
-        <a href="https://www.airbnb.com/" target="_blank" class="primary-btn">
-            View Our Listings
-        </a>
-    </div>
-</section>
+    <section class="section fade-in">
+        <h2 style="font-family: 'Playfair Display', serif;">Contact Us</h2>
+        <p>For booking inquiries or property partnerships:</p>
+        <a href="mailto:hello@jkstay.net" class="primary-btn">Email JKstays</a>
+    </section>
 
-<section id="about" class="section fade-in">
-    <h2>About JKstays</h2>
-    <img src="jkstays-logo.svg" alt="JKstays Logo" class="about-logo">
-    <p>
-        JKstays specializes in managing high-quality short-term rental properties.
-        We provide travelers with elevated accommodations while offering property
-        owners professional management and peace of mind. We are currently based in Houston, Texas.
-    </p>
-</section>
-
-<section id="book" class="section dark fade-in">
-    <h2>Booking Inquiry</h2>
-
-    <form action="https://formsubmit.co/kayla@jkstay.net" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="text" name="dates" placeholder="Requested Dates">
-        <textarea name="message" placeholder="Tell us about your stay"></textarea>
-        <button type="submit">Submit Inquiry</button>
-    </form>
-</section>
-
-<footer>
-    <p>© 2026 JKstays. All rights reserved.</p>
-</footer>
-
-<script>
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOptions = {
-  threshold: 0.3
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add('appear');
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-</script>
-
+    <footer>
+        <p>© 2026 JKstay. All rights reserved.</p>
+    </footer>
 </body>
 </html>
